@@ -1,0 +1,21 @@
+Questions:
+- What happens if users choose “Cancel”?
+
+Because the program uses statement "(option == JOptionPane.YES_OPTION ? "Yes" : "No")" to determine the user's choice, if the user selects "Cancel," the comparison statement will return False, so the program will display a result message box with "No."
+
+- How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do”
+and “I don’t” 
+
+Use method showOptionDialog(Component parentComponent, Object message, String title, int optionType, int messageType, Icon icon, Object[] options, Object initialValue)
+
+Source code:
+int option = JOptionPane.showOptionDialog(
+    		    null,
+    		    "Do you agree?",
+    		    "Confirmation",
+    		    JOptionPane.DEFAULT_OPTION,
+    		    JOptionPane.QUESTION_MESSAGE,
+    		    null,
+    		    new String[]{"I do", "I don’t"},
+    		    "I do"
+    		);

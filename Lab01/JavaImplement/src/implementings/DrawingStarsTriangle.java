@@ -8,8 +8,9 @@ public class DrawingStarsTriangle {
 		
 		System.out.print("Input the size of the stars triangle: ");
 		int size = sc.nextInt();
-		int numSpace, numStars;
 		sc.close();
+		
+		int numSpace, numStars;
 		System.out.println("Your stars triangle: ");
 		for (int i = 1; i <= size; ++i) {
 			numStars = 2 * i - 1;
@@ -19,9 +20,6 @@ public class DrawingStarsTriangle {
 			}
 			for (int j = 0; j < numStars; j++) {
 				System.out.print("*");
-			}
-			for (int j = 0; j < numSpace; j++) {
-				System.out.print(" ");
 			}
 			System.out.println();
 		}
